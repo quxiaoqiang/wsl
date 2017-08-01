@@ -16,7 +16,6 @@ do_login_url = base_url + '/common-platform/doLogin'
 requests.packages.urllib3.disable_warnings() # 不显示https warning
 session = requests.Session()
 
-
 def getCodeImg():
     # 获取验证码图片、保存图片、更改背景、ocr图片验证码
     code_resp = session.request(method='GET', url=code_url, verify=False)
