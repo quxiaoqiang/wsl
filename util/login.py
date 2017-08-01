@@ -3,7 +3,7 @@ import requests,sys
 from PIL import Image
 from pytesseract import image_to_string
 
-#pytesseract.tesseract_cmd = 'D:\\env\\Tesseract-OCR\\tesseract'
+# 指定tesseract_cmd本地地址，否则无法实现ocr
 tesseract_cmd = '/usr/local/Cellar/tesseract/3.05.01/tesseract'
 
 # url
