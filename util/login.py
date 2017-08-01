@@ -11,7 +11,6 @@ base_url = 'https://test-a.asean-go.com'
 code_url = base_url + '/common-platform/code'
 do_login_url = base_url + '/common-platform/doLogin'
 
-
 # 通过session请求接口，可以自动传入上个接口的cookie
 requests.packages.urllib3.disable_warnings() # 不显示https warning
 session = requests.Session()
