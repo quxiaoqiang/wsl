@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import requests,sys
+import requests,sys,time
 from PIL import Image
 from pytesseract import image_to_string
 
@@ -34,7 +34,7 @@ def changeBackground(img_fp):
         new_img.paste(img, (0, 0, x, y), img)
         return new_img
     except:
-        print u'更换图片背景失败'
+        print ('更换图片背景失败')
 
 do_login_data = {
 # 初始化登陆账号数据
@@ -47,19 +47,24 @@ def loginData(userName,password):
     do_login_data['userName'] = userName
     do_login_data['password'] = password
     do_login_data['verificationCode'] = getCodeImg()
+    while len(do_login_data['verificationCode']) != 5:
+        time.sleep(1)
+        print ('验证码识别错误，重新获取并识别！')
+        do_login_data['verificationCode'] = getCodeImg()
     print '登陆账号信息：', do_login_data
 
 def doLogin():
     #登陆账号，判断登陆是否成功
     do_login_resp = session.request(method='POST', url=do_login_url, data=do_login_data, verify=False)
-    #print 'errorCode:', do_login_resp.json()['errorCode'], 'errorMsg:', do_login_resp.json()['errorMsg']
+#    print 'errorCode:', do_login_resp.json()['errorCode'], 'errorMsg:', do_login_resp.json()['errorMsg'],type(do_login_resp.json()['errorMsg'])
+
     if do_login_resp.json()['errorCode'] == 0:
-        print '恭喜, ' + do_login_data['userName'] + ' 登陆成功'
-        print '------------------------------------------------------------------'
+        print ('恭喜, ' + do_login_data['userName'] + ' 登陆成功')
+        print ('-----------------------------------------------------------------------------')
         return session
     else:
-        print '哎呀, ' + do_login_data['userName'] + ' 登陆失败'
-        print '------------------------------------------------------------------'
+        print ('哎呀, ' + do_login_data['userName'] + ' 登陆失败')
+        print ('-----------------------------------------------------------------------------')
         sys.exit()
 
 
