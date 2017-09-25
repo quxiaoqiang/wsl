@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-import requests,sys,time
+import requests
+import sys
+import time
 from PIL import Image
 from pytesseract import image_to_string
 
@@ -75,5 +77,6 @@ if __name__ == '__main__':
     caigouyuanqu = 'https://test-o.asean-go.com/platform-oss/api/backups/account/queryAccountPage?pageNo=1&pageCount=10&accountRole=1'
     url = 'https://test-e.asean-go.com/sys-platform/api/sys/perm/drn/queryByDrnPre?drn=/&page=1&total=291&pageSize=1000000'
     get_menu_resp = session.request(method='GET', url=url, verify=False)
+
     print get_menu_resp.json()  # 返回dict
     print get_menu_resp.text
