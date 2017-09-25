@@ -2,10 +2,8 @@
 # _*_ coding: utf-8 _*_
 
 from commands import *
-import time
 from send_mail import *
 
-#user = 'quxiaoqiang@asean-go.com'
 
 res = getoutput('ssh -v -p 8400 test@120.77.71.43')
 if 'established' in res:
