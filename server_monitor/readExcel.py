@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding: utf-8 _*_
-import xlrd
-
+import xlrd,logging
+from back import log
 def read_xls():
     server_name_port = []
     workbook = xlrd.open_workbook('./deploy.xlsx')
@@ -16,5 +16,8 @@ def read_xls():
     return server_name_port
 
 if __name__ == '__main__':
-    print read_xls()
+    #print read_xls()
+    log.console_out('./back/eeeaccess.log')
+    logging.debug(read_xls())
+
 
