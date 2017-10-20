@@ -15,10 +15,10 @@ def ssh_server_port(server_ip):
         res = getoutput('ssh -v -p' + str(int(i[1])) +' '+ server_ip)
         if 'established' in res:
             #print time.strftime("%Y-%m-%d %H:%M:%S   ", time.localtime()) + ' ' + i[0] + ' started'
-            logging.info(i[0] + 'started')
+            logging.info(i[0] + '  started')
         elif 'refused' in res:
             #print time.strftime("%Y-%m-%d %H:%M:%S   ", time.localtime()) + ' ' + i[0] + ' stoped'
-            logging.info(i[0] + 'stoped')
+            logging.info(i[0] + '  stoped')
 
         time.sleep(5)
 

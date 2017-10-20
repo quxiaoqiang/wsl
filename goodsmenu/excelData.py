@@ -2,8 +2,7 @@
 # _*_ coding: utf-8 _*_
 
 from xlrd import *
-from json import *
-import json
+
 
 e = open_workbook(filename='./goods.xlsx')
 
