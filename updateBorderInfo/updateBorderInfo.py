@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding: utf-8 _*_
 
-import pymysql
+import pymysql,time
 from readExcel import readExcel
 
 config_prod = {
@@ -33,10 +33,11 @@ def updateBorderInfo():
     for i in borderInfo():
         sql = "update t_border set border_bank=" + "'" + i[1] + "'" + "," + "border_phone=" + "'" +str(
             int(i[0])) + "'" + " where border_card=" + "'" +i[2] + "'" + ";"
-        #print sql
+        print sql
         data = cur.execute(sql)
         conn.commit()
         print '返回数据:', data
+        time.sleep(1)
 
     cur.close()
     conn.close()
