@@ -5,13 +5,16 @@ from commands import *
 from readExcel import *
 import time
 from back import log
-import logging
+
 
 server_ip = ['test@120.77.70.65','test@120.77.70.59','test@120.77.71.43']
 
 def ssh_server_port(server_ip):
     server_port = read_xls()
     for i in server_port:
+        #ssh -v -p port username@hostip
+        #telnet ip port
+        #
         res = getoutput('ssh -v -p' + str(int(i[1])) +' '+ server_ip)
         if 'established' in res:
             #print time.strftime("%Y-%m-%d %H:%M:%S   ", time.localtime()) + ' ' + i[0] + ' started'

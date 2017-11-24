@@ -17,7 +17,7 @@ ch.setLevel(logging.DEBUG)
 
 # create file handler and set level to warning
 # 创建文件处理程序并设置warning警告级别
-fh = logging.FileHandler("aaaaaaccess.log")
+fh = logging.FileHandler("access.log")
 # fh.setLevel(logging.WARNING) #把WARNING级别以上的日志写到 日志文件中
 fh.setLevel(logging.INFO) ##把INFO 级别以上的日志写到 日志文件中去
 # fh.setLevel(logging.DEBUG)

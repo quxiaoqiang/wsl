@@ -1,0 +1,31 @@
+2017-11-06 10:26:54,582 DEBUG   : this is debug info
+2017-11-06 10:26:54,582 INFO    : this is information
+2017-11-06 10:26:54,582 WARNING : this is warning message
+2017-11-06 10:26:54,582 ERROR   : this is error message
+2017-11-06 10:26:54,582 CRITICAL: this is fatal message, it is same as logger.critical
+2017-11-06 10:26:54,582 CRITICAL: this is critical message
+2017-11-06 10:26:54,582 ERROR   : this is an exception message
+Traceback (most recent call last):
+  File "/Users/xiaoqiang/Documents/PyCharmProjects/wsl/testLogging/baseLog.py", line 32, in <module>
+    1/0
+ZeroDivisionError: integer division or modulo by zero
+2017-11-06 10:27:15,728 DEBUG   : this is debug info
+2017-11-06 10:27:15,728 INFO    : this is information
+2017-11-06 10:27:15,728 WARNING : this is warning message
+2017-11-06 10:27:15,728 ERROR   : this is error message
+2017-11-06 10:27:15,728 CRITICAL: this is fatal message, it is same as logger.critical
+2017-11-06 10:27:15,728 CRITICAL: this is critical message
+2017-11-06 10:27:15,729 ERROR   : this is an exception message
+None
+2017-11-06 10:37:51,243 DEBUG   : this is debug info
+2017-11-06 10:37:51,243 INFO    : this is information
+2017-11-06 10:37:51,243 WARNING : this is warning message
+2017-11-06 10:37:51,243 ERROR   : this is error message
+2017-11-06 10:37:51,244 CRITICAL: this is fatal message, it is same as logger.critical
+2017-11-06 10:37:51,244 CRITICAL: this is critical message
+2017-11-06 10:38:05,984 DEBUG   : this is debug info
+2017-11-06 10:38:05,984 INFO    : this is information
+2017-11-06 10:38:05,985 WARNING : this is warning message
+2017-11-06 10:38:05,985 ERROR   : this is error message
+2017-11-06 10:38:05,985 CRITICAL: this is fatal message, it is same as logger.critical
+2017-11-06 10:38:05,985 CRITICAL: this is critical message

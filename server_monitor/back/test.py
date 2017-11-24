@@ -3,7 +3,7 @@
 
 import commands
 
-##########返回命令执行结果
+# 返回命令执行结果
 def getComStr(comand):
     global proStr
     try:

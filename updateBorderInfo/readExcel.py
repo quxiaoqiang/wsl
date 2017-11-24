@@ -5,8 +5,8 @@ from xlrd import *
 
 def readExcel():
     list = []
-    excel  = open_workbook(filename='borderinfo.xls')
-    book0 = excel.sheet_by_index(1)
+    excel  = open_workbook(filename='border1022.xls')
+    book0 = excel.sheet_by_index(0)
     #print book0.nrows,book0.ncols
 
     for i in range(1,book0.nrows):

@@ -71,12 +71,15 @@ def doLogin():
 
 
 if __name__ == '__main__':
-    loginData('manager','Wsl123456')
+    loginData('yunying01','Wsl123456')
     doLogin()
     # demo，获取api数据
-    caigouyuanqu = 'https://test-o.asean-go.com/platform-oss/api/backups/account/queryAccountPage?pageNo=1&pageCount=10&accountRole=1'
-    url = 'https://test-e.asean-go.com/sys-platform/api/sys/perm/drn/queryByDrnPre?drn=/&page=1&total=291&pageSize=1000000'
-    get_menu_resp = session.request(method='GET', url=url, verify=False)
+    #caigouyuanqu = 'https://test-o.asean-go.com/platform-oss/api/backups/account/queryAccountPage?pageNo=1&pageCount=10&accountRole=1'
+    #url = 'https://test-e.asean-go.com/sys-platform/api/sys/perm/drn/queryByDrnPre?drn=/&page=1&total=291&pageSize=1000000'
+    ul = 'http://116.10.142.251:9111/api/rest/gatein/release?ts=1511506380772&version=1.0&apiKey=b1PlnYZ19sWEROUoqqnM-_U3eWVz-6Ild7b_H3yhkGY&sign=iSOQZPdYc3TQ7K-mRiDt6ChoWyxhW8NVY1pok-qnOAg'
+    url = 'http://116.10.142.251:9111/api/rest/gatein/release?ts=1511419163356&version=1.0&apiKey=b1PlnYZ19sWEROUoqqnM-_U3eWVz-6Ild7b_H3yhkGY&sign=F-ktgdntT0GydYoiw6knzrB0H6t6yCZvKjPboS4IKeQ'
+    get_menu_resp = session.request(method='GET', url=ul, verify=False)
 
-    print get_menu_resp.json()  # 返回dict
+    #print get_menu_resp.json()  # 返回dict
     print get_menu_resp.text
+
