@@ -26,4 +26,3 @@ def setup_logging02(default_path='logConf.yaml',default_level=logging.INFO,env_k
 
 setup_logging02()
 
-#test
