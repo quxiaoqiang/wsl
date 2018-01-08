@@ -25,3 +25,5 @@ def setup_logging02(default_path='logConf.yaml',default_level=logging.INFO,env_k
 #LOG_CFG=my_logging.yaml python my_server.py
 
 setup_logging02()
+
+#test
