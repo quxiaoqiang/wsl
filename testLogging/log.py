@@ -10,7 +10,7 @@ import logging, sys
 4.定义handler的输出格式
 5.将logger添加到handler里面
 '''
-def log():
+def log(message):
     # 指定日志的最低输出级别，默认为WARN级别
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)  # log等级的总开关
@@ -31,19 +31,22 @@ def log():
 
     # 为logger添加的日志处理器
     logger.addHandler(file_handler)
+    logger.info(message)
+
     #logger.addHandler(console_handler)
+    logger.removeHandler(file_handler)
     return logger
 
 
 
 if __name__ == '__main__':
     # 输出不同级别的log
-    log().debug('this is debug info')
-    log().info('this is information')
-    log().warn('this is warning message')
-    log().error('this is error message')
-    log().fatal('this is fatal message, it is same as logger.critical')
-    log().critical('this is critical message')
-
+    #log().debug('this is debug info')
+    #log().info('this is information')
+    #log().warn('this is warning message')
+    #log().error('this is error message')
+    #log().fatal('this is fatal message, it is same as logger.critical')
+    #log().critical('this is critical message')
+    log('ssssss')
 
 

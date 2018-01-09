@@ -22,10 +22,10 @@ def install_apks():
     # 安装apk到已连接的设备:"adb -s serial_numbers install -r apk_path"
     serial_numbers = get_serial_numbers()
     if len(serial_numbers) ==0:
-        log().warning('没有检测到已连接的设备，请重新连接设备')
+        log('没有检测到已连接的设备，请重新连接设备')
         sys.exit()
     else:
-        log().info('已连接的设备：%s' %serial_numbers)
+        log('已连接的设备：%s' %serial_numbers)
 
     # 获取apk_path
     apk_path = raw_input("请输入apk_path:").split(" ")
@@ -34,11 +34,11 @@ def install_apks():
     for apk in apk_path:
         for num in serial_numbers:
             if apk != '':
-                log().info(num)
-                log().info(apk)
+                log(num)
+                log(apk)
                 comm = "adb -s %s install -r %s" %(num,apk)
                 out = commands.getoutput(comm)
-                log().info(out)
+                log(out)
     return
 if __name__ == "__main__":
     install_apks()
