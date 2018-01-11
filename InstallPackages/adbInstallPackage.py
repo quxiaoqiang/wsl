@@ -5,9 +5,7 @@ import commands,sys
 from testLogging.log import *
 
 #print commands.getstatusoutput('ls ..')
-#print commands.mkarg()
-#print commands.mk2arg()
-#print commands.warnpy3k()
+#print commands.getoutput('ls ..')
 
 def get_serial_numbers():
     devices = commands.getoutput('adb devices')  # 获取已连接的设备信息

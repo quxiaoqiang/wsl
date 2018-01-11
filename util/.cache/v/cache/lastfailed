@@ -1,3 +1,5 @@
 {
-  "test.py::test_fun": true
+  "test_time.py::test_timedistance_v0[a1-b1-expected1]": true, 
+  "test_time.py::test_timedistance_v1[backward]": true, 
+  "test_time.py::test_timedistance_v2[20011211-20011211-expected1]": true
 }

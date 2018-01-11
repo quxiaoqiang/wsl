@@ -13,7 +13,7 @@ def console_out(logFilename):
         format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',   # 定义输出log的格式
         datefmt='%Y/%m/%d %H:%M:%S',    # 日志输出时间格式
         filename=logFilename,  # log文件名
-        filemode='w'    # 写入模式“w”或“a”
+        #filemode='w'    # 写入模式“w”或“a”
     )
     # Define a Handler and set a format which output to console
     console = logging.StreamHandler()  # 定义console handler
@@ -21,7 +21,10 @@ def console_out(logFilename):
     formatter = logging.Formatter('%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s')#定义该handler格式
     console.setFormatter(formatter)
     # Create an instance实例
-    logging.getLogger().addHandler(console)  # 实例化添加handler
+    logger = logging.getLogger()
+    logger.addHandler(console)  # 实例化添加handler
+    logger.removeHandler(console)
+
 
 if __name__ == "__main__":
     console_out('access.log')
